@@ -81,7 +81,9 @@ function ASTToTokens(ast) {
     function emit(tok, node, length) {
         assert(tok != null);
         assert(node != null);
-        assert(length > 0);
+        // try {
+            assert(length > 0);
+        // } catch (e) {}
         node = node.value || node;
 
         res.push({
